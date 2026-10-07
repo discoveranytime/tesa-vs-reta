@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tesamorelin vs Retatrutide: Which Is Better for Fat Burning?</title>
+<script>try{var __t=localStorage.getItem('tesavreta-theme');if(__t==='light')document.documentElement.setAttribute('data-theme','light');}catch(e){}</script>
+<style>
+*{box-sizing:border-box; margin:0; padding:0}
+:root{
+  --bg:#0b0a09; --bg2:#100e0c; --card:#151210; --card2:#0d0b0a;
+  --line:#2b2420; --line2:#3a312b;
+  --text:#f7f4f0; --muted:#a8a094; --faint:#6f675e;
+  --tesa:#fb923c; --reta:#38bdf8;
+  --accent:var(--tesa); --radius:16px;
+}
+[data-theme="light"]{
+  --bg:#f2efeb; --bg2:#e8e2da; --card:#ffffff; --card2:#f4f1ec;
+  --line:#d8d0c6; --line2:#c4b9ac;
+  --text:#1d1712; --muted:#5c534a; --faint:#8d8378;
+  --tesa:#c2410c; --reta:#0284c7;
+}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} *{animation:none!important; transition:none!important} }
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  background:var(--bg); color:var(--text); line-height:1.65; font-size:16px; overflow-x:hidden;
+  background-image:radial-gradient(1100px 520px at 8% -5%, #fb923c12 0%, transparent 60%),
+                   radial-gradient(900px 480px at 96% 8%, #38bdf810 0%, transparent 55%);
+}
+[data-theme="light"] body{background-image:radial-gradient(1100px 520px at 8% -5%, #c2410c10 0%, transparent 60%),radial-gradient(900px 480px at 96% 8%, #0284c710 0%, transparent 55%)}
+::selection{background:#fb923c55}
+#progress{position:fixed; top:0; left:0; right:0; height:3px; z-index:300; pointer-events:none}
+#progressFill{height:100%; width:0; background:linear-gradient(90deg,var(--tesa),var(--reta)); border-radius:0 3px 3px 0}
+#bg-dots{position:fixed; inset:0; z-index:0; pointer-events:none}
+.shell{display:flex; min-height:100vh; position:relative; z-index:1}
+.sidebar{
+  position:fixed; top:0; left:0; bottom:0; width:252px; z-index:100;
+  background:rgba(11,10,9,.94); backdrop-filter:blur(10px); border-right:1px solid var(--line);
+  display:flex; flex-direction:column; padding:24px 16px; gap:6px;
+  transition:transform .32s ease, background-color .45s ease, border-color .45s ease;
+}
+[data-theme="light"] .sidebar{background:rgba(242,239,235,.94)}
+.side-brand{display:flex; align-items:center; gap:10px; font-weight:800; font-size:15px; padding:2px 8px 14px}
+.side-brand .drop{width:32px; height:32px; border-radius:10px; display:inline-flex; align-items:center; justify-content:center; background:linear-gradient(135deg,var(--tesa),var(--reta)); font-size:17px; flex:0 0 auto}
+.sidenav{display:flex; flex-direction:column; gap:3px; position:relative; overflow-y:auto; scrollbar-width:thin; padding-bottom:4px}
+.side-indicator{position:absolute; left:-16px; top:0; width:4px; height:40px; border-radius:2px; background:linear-gradient(180deg,var(--tesa),var(--reta)); box-shadow:0 0 12px #fb923c88; opacity:0; transition:top .38s cubic-bezier(.2,.7,.2,1), height .38s cubic-bezier(.2,.7,.2,1), opacity .3s ease; pointer-events:none}
+.sidenav a{display:flex; align-items:center; gap:10px; color:var(--muted); text-decoration:none; font-size:13px; font-weight:600; padding:8px 12px; border-radius:10px; border:1px solid transparent; flex:0 0 auto}
+.sidenav a .n{font-size:10.5px; font-weight:800; color:var(--faint); background:#ffffff0c; border-radius:6px; padding:3px 7px; flex:0 0 auto}
+.sidenav a:hover{color:var(--text); background:#ffffff0c}
+.sidenav a.active{color:var(--text); background:#fb923c12; border-color:#fb923c44}
+.sidenav a.active .n{color:var(--tesa); background:#fb923c22}
+[data-theme="light"] .sidenav a:hover{background:rgba(30,22,18,.06)}
+.side-foot{margin-top:auto; display:flex; align-items:center; gap:10px; padding:8px}
+.side-foot span{font-size:12.5px; color:var(--faint); font-weight:600}
+.side-progress{padding:14px 10px 6px; margin-top:8px; border-top:1px solid var(--line)}
+.sp-head{display:flex; justify-content:space-between; align-items:baseline; font-size:11px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--faint); margin-bottom:8px}
+.sp-head #sidePct{color:var(--tesa); font-size:13px; letter-spacing:0}
+.sp-bar{height:6px; border-radius:3px; background:#ffffff10; overflow:hidden}
+.sp-bar #sideFill{display:block; height:100%; width:0; background:linear-gradient(90deg,var(--tesa),var(--reta)); border-radius:3px}
+[data-theme="light"] .sp-bar{background:rgba(30,22,18,.09)}
+.theme-btn{width:40px; height:40px; border-radius:50%; border:1px solid var(--line); background:#ffffff0c; color:var(--text); font-size:18px; cursor:pointer; display:inline-flex; align-items:center; justify-content:center; flex:0 0 auto; transition:opacity .5s ease, transform .25s ease, background-color .4s ease}
+.theme-btn:hover{transform:scale(1.1)}
+.theme-btn.dim{opacity:.32}
+.theme-btn.dim:hover{opacity:1}
+.menu-btn{position:fixed; top:12px; left:12px; z-index:190; width:42px; height:42px; border-radius:12px; background:rgba(11,10,9,.88); backdrop-filter:blur(8px); border:1px solid var(--line); color:var(--text); font-size:18px; cursor:pointer; display:none; align-items:center; justify-content:center}
+.side-backdrop{position:fixed; inset:0; background:#000a; z-index:150; opacity:0; pointer-events:none; transition:opacity .3s ease}
+body.side-open .side-backdrop{opacity:1; pointer-events:auto}
+main{flex:1; min-width:0; padding-left:252px}
+.wrap{max-width:1060px; margin:0 auto; padding:0 32px}
+.mrail{display:none; position:sticky; top:0; z-index:90; background:rgba(11,10,9,.92); backdrop-filter:blur(10px); border-bottom:1px solid var(--line); overflow-x:auto; scrollbar-width:none; padding:10px 16px; gap:8px}
+[data-theme="light"] .mrail{background:rgba(242,239,235,.92)}
+.mrail::-webkit-scrollbar{display:none}
+.mrail a{flex:0 0 auto; color:var(--muted); text-decoration:none; font-size:12.5px; font-weight:700; padding:7px 12px; border-radius:999px; border:1px solid var(--line); white-space:nowrap}
+.mrail a.active{color:#1d1214; background:linear-gradient(135deg,var(--tesa),var(--reta)); border-color:transparent}
+.hero{padding:72px 0 26px; position:relative}
+.kicker{display:inline-block; font-size:12px; font-weight:800; letter-spacing:2px; text-transform:uppercase; color:var(--tesa); border:1px solid #fb923c55; background:#fb923c12; padding:8px 16px; border-radius:999px; margin-bottom:20px}
+h1{font-size:clamp(36px,5.2vw,58px); line-height:1.08; letter-spacing:-1.5px; font-weight:900; margin-bottom:10px}
+h1 .t-tesa{color:var(--tesa)}
+h1 .t-reta{color:var(--reta)}
+h1 .t-vs{color:var(--faint); font-weight:700}
+.hero .qline{font-size:clamp(20px,2.8vw,28px); font-weight:800; letter-spacing:-.5px; margin-bottom:16px; background:linear-gradient(92deg,var(--tesa),var(--reta)); -webkit-background-clip:text; background-clip:text; color:transparent; display:inline-block}
+[data-theme="light"] .hero .qline{background:linear-gradient(92deg,#c2410c,#0284c7); -webkit-background-clip:text; background-clip:text; color:transparent}
+.hero p.lead{font-size:18px; color:var(--muted); max-width:62ch}
+.hero p.lead strong{color:var(--text)}
+.excite{position:relative; display:flex; gap:18px; align-items:center; border-radius:var(--radius); padding:22px 26px; margin:8px 0 4px; background:linear-gradient(180deg,var(--card),var(--card2)); overflow:hidden}
+.excite::before{content:""; position:absolute; inset:0; border-radius:var(--radius); padding:2px; background:linear-gradient(120deg,var(--tesa),var(--reta)); -webkit-mask:linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite:xor; mask-composite:exclude; pointer-events:none}
+.excite-emoji{font-size:44px; flex:0 0 auto; animation:excite-bounce 1.6s ease-in-out infinite}
+@keyframes excite-bounce{0%,100%{transform:translateY(0) rotate(-6deg)}50%{transform:translateY(-8px) rotate(6deg)}}
+@media (prefers-reduced-motion: reduce){ .excite-emoji{animation:none} }
+.excite h3{font-size:22px; font-weight:900; letter-spacing:-.4px; margin-bottom:4px; background:linear-gradient(92deg,var(--tesa),var(--reta)); -webkit-background-clip:text; background-clip:text; color:transparent}
+[data-theme="light"] .excite h3{background:linear-gradient(92deg,#c2410c,#0284c7); -webkit-background-clip:text; background-clip:text; color:transparent}
+.excite p{color:var(--muted); font-size:15.5px; margin:0}
+.excite p strong{color:var(--text)}
+.disclaimer{border:1px solid #fb923c44; background:#fb923c0d; border-radius:var(--radius); padding:18px 22px; font-size:14px; color:var(--muted); margin:26px 0}
+.disclaimer strong{color:var(--tesa)}
+section.chapter{padding:40px 0 8px; scroll-margin-top:16px}
+.ch-head{display:flex; align-items:center; gap:14px; margin-bottom:6px}
+.ch-num{flex:0 0 auto; min-width:52px; height:40px; padding:0 14px; border-radius:12px; display:inline-flex; align-items:center; justify-content:center; font-weight:900; font-size:15px; color:#1d1214; background:linear-gradient(135deg,var(--tesa),#fbbf24)}
+.ch-num.reta{background:linear-gradient(135deg,var(--reta),#7dd3fc); color:#0b1c26}
+.ch-num.mix{background:linear-gradient(135deg,var(--tesa),var(--reta)); color:#1d1214}
+h2{font-size:clamp(24px,3vw,32px); letter-spacing:-.6px; font-weight:800}
+.ch-sub{color:var(--muted); margin:2px 0 22px; max-width:72ch}
+.ch-sub strong{color:var(--text)}
+.card{background:linear-gradient(180deg,var(--card),var(--card2)); border:1px solid var(--line); border-radius:var(--radius); padding:24px; transition:background-color .45s ease, border-color .45s ease}
+.card.tesa{border-top:3px solid var(--tesa)}
+.card.reta{border-top:3px solid var(--reta)}
+.card h3{font-size:17px; margin-bottom:8px}
+.card h3 .tag{font-size:11px; font-weight:800; letter-spacing:1px; text-transform:uppercase; padding:4px 10px; border-radius:999px; margin-left:8px; vertical-align:2px}
+.tag.t{background:#fb923c22; color:var(--tesa); border:1px solid #fb923c55}
+.tag.r{background:#38bdf822; color:var(--reta); border:1px solid #38bdf855}
+.card p{color:var(--muted); font-size:15px; margin:8px 0}
+.card p strong, .card li strong{color:var(--text)}
+.card ul{margin:10px 0 4px 20px; color:var(--muted); font-size:15px}
+.card li{margin:6px 0}
+.grid{display:grid; gap:16px}
+.grid.c2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.grid.c3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.warn{border-left:4px solid var(--tesa); background:#fb923c0d; border-radius:0 14px 14px 0; padding:18px 22px; font-size:15.5px; color:var(--muted); margin:14px 0}
+.warn strong{color:var(--text)}
+.bigwarn{border:2px solid #f87171; background:#f871710d; border-radius:var(--radius); padding:22px 26px; margin:18px 0}
+.bigwarn h3{color:#f87171; font-size:19px; margin-bottom:8px}
+.bigwarn p, .bigwarn li{color:var(--muted); font-size:15px}
+.bigwarn strong{color:var(--text)}
+.bigwarn ul{margin:10px 0 4px 20px}
+.bigwarn li{margin:6px 0}
+.bigline{font-size:clamp(20px,2.6vw,26px); font-weight:800; letter-spacing:-.4px; line-height:1.45}
+.bigline .hl-t{color:var(--tesa)}
+.bigline .hl-r{color:var(--reta)}
+/* big number tiles */
+.num-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:16px}
+.num-tile{position:relative; border-radius:var(--radius); padding:24px 22px; background:linear-gradient(180deg,var(--card),var(--card2)); border:1px solid var(--line); overflow:hidden}
+.num-tile::before{content:""; position:absolute; inset:0 0 auto 0; height:4px; background:var(--nc,var(--tesa))}
+.num-tile .nv{font-size:clamp(38px,4.5vw,52px); font-weight:900; letter-spacing:-1.5px; color:var(--nc,var(--tesa)); line-height:1.05}
+.num-tile .nl{font-weight:800; font-size:15px; margin:8px 0 4px}
+.num-tile .nc{font-size:12.5px; color:var(--faint); line-height:1.55}
+.num-tile .nc strong{color:var(--muted)}
+/* evidence table */
+.ev-table{border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; background:linear-gradient(180deg,var(--card),var(--card2))}
+.ev-head,.ev-row{display:grid; grid-template-columns:1.1fr 1fr 1fr}
+.ev-head{font-size:12px; font-weight:800; letter-spacing:1.2px; text-transform:uppercase; color:var(--faint)}
+.ev-head>div{padding:14px 18px}
+.ev-head .hc-t{color:var(--tesa)}
+.ev-head .hc-r{color:var(--reta)}
+.ev-row{border-top:1px solid var(--line); cursor:pointer}
+.ev-row>div{padding:14px 18px; font-size:14.5px}
+.ev-row .rc{font-weight:700}
+.ev-row .rv-t{color:var(--muted); border-left:2px solid var(--tesa)}
+.ev-row .rv-r{color:var(--muted); border-left:2px solid var(--reta)}
+.ev-row:hover{background:#ffffff06}
+.ev-detail{display:none; grid-column:1/-1; padding:0 18px 16px; font-size:13.5px; color:var(--faint); border-top:1px dashed var(--line); padding-top:12px; margin:0 18px; padding-left:0; padding-right:0}
+.ev-row.open .ev-detail{display:block}
+.ev-row .rc::after{content:" +"; color:var(--faint); font-weight:400}
+/* profiles */
+.profile{position:relative; padding-top:20px}
+.profile .pdot{position:absolute; top:14px; left:20px; width:10px; height:10px; border-radius:50%; animation:adot 1.8s ease-in-out infinite}
+.profile.tesa .pdot{background:var(--tesa); box-shadow:0 0 10px var(--tesa)}
+.profile.reta .pdot{background:var(--reta); box-shadow:0 0 10px var(--reta)}
+@keyframes adot{0%,100%{transform:scale(1); opacity:1}50%{transform:scale(1.4); opacity:.5}}
+@media (prefers-reduced-motion: reduce){ .profile .pdot{animation:none} }
+.profile h3{font-size:16.5px}
+/* goal selector */
+.goal-btns{display:flex; flex-wrap:wrap; gap:10px; margin:6px 0 18px}
+.goal-btns button{border:1px solid var(--line); background:#ffffff08; color:var(--text); font:inherit; font-size:14.5px; font-weight:700; padding:11px 18px; border-radius:999px; cursor:pointer; transition:all .2s}
+.goal-btns button:hover{border-color:var(--tesa)}
+.goal-btns button.sel{background:linear-gradient(135deg,var(--tesa),var(--reta)); color:#1d1214; border-color:transparent}
+.goal-out{border-radius:var(--radius); padding:22px 26px; background:linear-gradient(180deg,var(--card),var(--card2)); border:1px solid var(--line); min-height:130px}
+.goal-out h3{font-size:18px; margin-bottom:6px}
+.goal-out p{color:var(--muted); font-size:15px}
+.goal-out p strong{color:var(--text)}
+.goal-note{font-size:12.5px; color:var(--faint); margin-top:12px}
+/* diagrams */
+.diagram{background:linear-gradient(180deg,var(--card),var(--card2)); border:1px solid var(--line); border-radius:16px; padding:22px 24px 18px; margin:36px 0 4px}
+.d-title{font-size:13px; font-weight:800; letter-spacing:1.6px; text-transform:uppercase; color:var(--faint); margin-bottom:8px}
+.diagram svg{width:100%; height:auto; display:block}
+.diagram text{font-family:inherit}
+.dt{fill:var(--text); font-weight:700}
+.dm{fill:var(--muted)}
+.d-cap{font-size:13.5px; color:var(--muted); margin-top:10px}
+.d-cap strong{color:var(--text)}
+.flow{stroke-dasharray:7 7; animation:d-dash 1.1s linear infinite}
+.flow-rev{stroke-dasharray:7 7; animation:d-dashrev 1.1s linear infinite}
+@keyframes d-dash{to{stroke-dashoffset:-28}}
+@keyframes d-dashrev{to{stroke-dashoffset:28}}
+.d-pulse{transform-box:fill-box; transform-origin:center; animation:d-pulse 2.6s ease-in-out infinite}
+@keyframes d-pulse{0%,100%{opacity:.55; transform:scale(1)}50%{opacity:1; transform:scale(1.08)}}
+.d-bob{transform-box:fill-box; transform-origin:center; animation:d-bob 3s ease-in-out infinite}
+@keyframes d-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.d-cycle{animation:d-cycle 8s ease-in-out infinite}
+@keyframes d-cycle{0%,100%{opacity:.28}6%,30%{opacity:1}40%{opacity:.28}}
+.d-glow{animation:d-glow 3s ease-in-out infinite}
+@keyframes d-glow{0%,100%{opacity:.45}50%{opacity:1}}
+.body-toggle{display:flex; gap:10px; flex-wrap:wrap; margin-bottom:6px}
+.body-toggle button{border:1px solid var(--line); background:#ffffff08; color:var(--text); font:inherit; font-size:14px; font-weight:700; padding:10px 18px; border-radius:999px; cursor:pointer}
+.body-toggle button.sel-t{background:#fb923c22; border-color:var(--tesa); color:var(--tesa)}
+.body-toggle button.sel-r{background:#38bdf822; border-color:var(--reta); color:var(--reta)}
+.body-toggle button.sel-b{background:linear-gradient(135deg,#fb923c22,#38bdf822); border-color:var(--tesa); color:var(--text)}
+.comp{transition:opacity .5s ease, filter .5s ease}
+.comp.dim{opacity:.18; filter:saturate(.3)}
+/* sources */
+.src{border:1px solid var(--line); border-radius:12px; padding:16px 20px; margin:10px 0; font-size:14px; color:var(--muted)}
+.src strong{color:var(--text)}
+.src a{color:var(--reta); text-decoration:none; border-bottom:1px dotted var(--reta)}
+.src a:hover{border-bottom-style:solid}
+/* glossary */
+.gloss{border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; background:linear-gradient(180deg,var(--card),var(--card2))}
+.g-item{border-bottom:1px solid var(--line)}
+.g-item:last-child{border-bottom:none}
+.g-q{width:100%; background:none; border:none; color:var(--text); font:inherit; font-size:1.02rem; font-weight:700; text-align:left; padding:1.05rem 1.4rem; cursor:pointer; display:flex; justify-content:flex-start; align-items:center; gap:1rem}
+.g-q:hover{background:#ffffff08}
+.g-q .term{color:var(--tesa)}
+.g-item:nth-child(3n+2) .g-q .term{color:var(--reta)}
+.g-item:nth-child(3n) .g-q .term{color:#a3e635}
+.g-q .plus{flex:0 0 auto; width:1.7rem; height:1.7rem; border-radius:50%; border:1px solid var(--line); margin-left:auto; display:inline-flex; align-items:center; justify-content:center; font-size:1.1rem; color:var(--muted); transition:all .3s}
+.g-item.open .g-q .plus{transform:rotate(45deg); background:linear-gradient(135deg,var(--tesa),var(--reta)); color:#1d1214; border-color:transparent}
+.gthumb{flex:0 0 auto; width:42px; height:42px; border-radius:12px; border:1px solid var(--line); animation:gaFloat 5s ease-in-out infinite}
+.gthumb.v2{animation:gaBreathe 4.4s ease-in-out infinite}
+.gthumb.v3{animation:gaTilt 6s ease-in-out infinite}
+@keyframes gaFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+@keyframes gaBreathe{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+@keyframes gaTilt{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}
+@media (prefers-reduced-motion: reduce){ .gthumb{animation:none} }
+.g-a{max-height:0; overflow:hidden; transition:max-height .45s ease}
+.g-a .gsci{padding:0 1.4rem 1rem; color:var(--muted); font-size:.95rem}
+.g-a .gsci strong{color:var(--text)}
+.gslabel{display:block; font-size:.7rem; font-weight:800; letter-spacing:.16em; text-transform:uppercase; color:var(--faint); margin-bottom:.35rem}
+.g-a .plain{margin:0 1.4rem 1.3rem; background:#ffffff08; border:1px dashed #ffffff22; border-radius:12px; padding:1rem 1.2rem; font-size:.96rem; color:var(--muted)}
+.g-a .plain .plabel{display:block; font-size:.72rem; font-weight:800; letter-spacing:.16em; text-transform:uppercase; color:var(--faint); margin-bottom:.35rem}
+.quiz{padding:0; overflow:hidden}
+.quiz-toggle{width:100%; display:flex; align-items:center; justify-content:space-between; gap:14px; background:none; border:none; color:var(--text); font:inherit; font-weight:800; font-size:17px; padding:22px 24px; cursor:pointer; text-align:left}
+.quiz-chev{flex:0 0 34px; height:34px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; background:linear-gradient(135deg,var(--tesa),var(--reta)); color:#1d1214; font-size:22px; font-weight:800; transition:transform .25s}
+.quiz.open .quiz-chev{transform:rotate(45deg)}
+.quiz-body{display:grid; grid-template-rows:0fr; transition:grid-template-rows .32s ease}
+.quiz.open .quiz-body{grid-template-rows:1fr}
+.quiz-inner{overflow:hidden; min-height:0}
+.quiz-options{display:grid; gap:10px; padding:2px 24px 4px}
+.quiz-options button{display:flex; align-items:center; gap:12px; text-align:left; background:#ffffff08; border:1px solid var(--line); color:var(--text); padding:13px 18px; border-radius:12px; font:inherit; font-size:15.5px; font-weight:700; cursor:pointer}
+.quiz-options button small{color:var(--muted); font-weight:500; font-size:13.5px}
+.quiz-options button:hover{border-color:var(--tesa)}
+.quiz-options button.picked{background:#fb923c1c; border-color:var(--tesa)}
+[data-theme="light"] .quiz-options button{background:rgba(30,22,18,.05)}
+.quiz-thanks{padding:4px 24px 0; color:var(--muted); font-size:14.5px; margin:12px 0 0}
+.quiz-thanks strong{color:var(--text)}
+.quiz-results{padding:2px 24px 24px}
+.qr-head{font-size:13.5px; color:var(--muted); margin:0 0 10px}
+#qrTotal{font-weight:700; color:var(--text)}
+.qr-row{display:grid; grid-template-columns:158px 1fr 118px; gap:12px; align-items:center; padding:7px 0; font-size:14.5px}
+.qr-label{font-weight:700; white-space:nowrap}
+.qr-bar{height:8px; border-radius:4px; background:#ffffff12; overflow:hidden}
+.qr-bar span{display:block; height:100%; width:0; background:linear-gradient(90deg,var(--tesa),var(--reta)); border-radius:4px; transition:width .6s ease}
+.qr-pct{color:var(--muted); font-size:13px; text-align:right; white-space:nowrap}
+[data-theme="light"] .qr-bar{background:rgba(30,22,18,.09)}
+.totop-wrap{text-align:center; margin:30px 0 8px}
+.totop{position:relative; display:inline-flex; align-items:center; gap:14px; background:linear-gradient(180deg,var(--card),var(--card2)); border:none; color:var(--text); font:inherit; font-weight:800; font-size:17px; padding:20px 38px; border-radius:16px; cursor:pointer; transition:transform .25s ease}
+.totop:hover{transform:translateY(-3px)}
+.totop::before{content:""; position:absolute; inset:0; border-radius:16px; padding:2px; background:linear-gradient(120deg,var(--tesa),var(--reta)); -webkit-mask:linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite:xor; mask-composite:exclude; pointer-events:none}
+.tt-arrow{width:38px; height:38px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; background:linear-gradient(135deg,var(--tesa),var(--reta)); color:#1d1214; font-size:20px; font-weight:900; flex:0 0 auto}
+footer{border-top:1px solid var(--line); margin-top:44px; padding:30px 0 46px; color:var(--faint); font-size:13.5px}
+footer strong{color:var(--muted)}
+.rv{opacity:0; transform:translateY(22px); transition:opacity .6s ease, transform .6s ease}
+.rv.in{opacity:1; transform:none}
+@media (prefers-reduced-motion: reduce){ .rv{opacity:1; transform:none} }
+@media (min-width:901px){ .menu-btn,.side-backdrop{display:none!important} }
+@media (max-width:900px){
+  main{padding-left:0}
+  .sidebar{transform:translateX(-106%); width:282px; z-index:200}
+  body.side-open .sidebar{transform:none}
+  .menu-btn{display:inline-flex}
+  .mrail{display:flex}
+  .wrap{padding:0 18px}
+  .hero{padding:40px 0 16px}
+  .card{padding:18px 20px}
+  .qr-row{grid-template-columns:1fr auto; row-gap:6px}
+  .qr-bar{grid-column:1/-1; grid-row:2}
+  .ev-head{display:none}
+  .ev-row{grid-template-columns:1fr 1fr}
+  .ev-row .rc{grid-column:1/-1; padding-bottom:4px}
+}
+</style>
+</head>
+<body>
+<div id="progress" aria-hidden="true"><div id="progressFill"></div></div>
+<canvas id="bg-dots" aria-hidden="true"></canvas>
+<div class="shell">
+<aside class="sidebar" id="sidebar" aria-label="Site navigation">
+  <div class="side-brand"><span class="drop">⚖️</span> Tesa vs Reta</div>
+  <nav class="sidenav" id="chapternav">
+    <span class="side-indicator" id="sideIndicator" aria-hidden="true"></span>
+    <a href="#ch1"><span class="n">01</span>Quick answer</a>
+    <a href="#ch2"><span class="n">02</span>What are they?</a>
+    <a href="#ch3"><span class="n">03</span>Fat compartments</a>
+    <a href="#ch4"><span class="n">04</span>Mechanisms</a>
+    <a href="#ch5"><span class="n">05</span>Who it's for</a>
+    <a href="#ch6"><span class="n">06</span>Burning fat?</a>
+    <a href="#ch7"><span class="n">07</span>Key numbers</a>
+    <a href="#ch8"><span class="n">08</span>Evidence table</a>
+    <a href="#ch9"><span class="n">09</span>The research</a>
+    <a href="#ch10"><span class="n">10</span>Limitations</a>
+    <a href="#ch11"><span class="n">11</span>Safety</a>
+    <a href="#ch12"><span class="n">12</span>Final verdict</a>
+    <a href="#ch13"><span class="n">13</span>Sources</a>
+    <a href="#ch14"><span class="n">14</span>Glossary</a>
+    <a href="#ch15"><span class="n">✦</span>Quiz</a>
+  </nav>
+  <div class="side-progress" aria-hidden="true">
+    <div class="sp-head"><span>Reading</span><span id="sidePct">0%</span></div>
+    <div class="sp-bar"><span id="sideFill"></span></div>
+  </div>
+  <div class="side-foot">
+    <button class="theme-btn" id="themeBtn" aria-label="Switch to light mode" title="Toggle light / dark">🌙</button>
+    <span>Light / dark</span>
+  </div>
+</aside>
+<button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+<div class="side-backdrop" id="sideBackdrop"></div>
+<main>
+<div class="mrail" id="mrail">
+  <a href="#ch1">01 · Answer</a><a href="#ch2">02 · What</a><a href="#ch3">03 · Fat</a><a href="#ch4">04 · Mechanism</a><a href="#ch5">05 · Who</a><a href="#ch6">06 · Burn?</a><a href="#ch7">07 · Numbers</a><a href="#ch8">08 · Evidence</a><a href="#ch9">09 · Research</a><a href="#ch10">10 · Limits</a><a href="#ch11">11 · Safety</a><a href="#ch12">12 · Verdict</a><a href="#ch13">13 · Sources</a><a href="#ch14">14 · Glossary</a><a href="#ch15">✦ · Quiz</a>
+</div>
+<div class="wrap">
+
+  <div class="hero">
+    <span class="kicker">⚖️ Head-to-head evidence check</span>
+    <h1><span class="t-tesa">Tesamorelin</span> <span class="t-vs">vs</span> <span class="t-reta">Retatrutide</span></h1>
+    <div><span class="qline">Which is better for fat burning?</span></div>
+    <p class="lead">The honest answer starts with a better question: <strong>better for what?</strong> These two compounds approach body fat through completely different biology — and they've never been tested against each other.</p>
+  </div>
+
+  <div class="excite rv">
+    <div class="excite-emoji">⚖️</div>
+    <div>
+      <h3>There is no universal winner</h3>
+      <p>No head-to-head trial exists. Different studies, different people, different goals — so this page compares <strong>what each one was actually studied for</strong>, with real numbers and full context.</p>
+    </div>
+  </div>
+
+  <div class="disclaimer"><strong>📋 Educational reference only.</strong> This page summarizes published human clinical research. It isn't medical advice, doesn't recommend any treatment, and isn't connected to any manufacturer. Tesamorelin is an FDA-approved prescription medicine for a specific use; retatrutide is investigational and not approved.</div>
+
+  <!-- 01 -->
+  <section class="chapter" id="ch1">
+    <div class="ch-head"><span class="ch-num mix">01</span><h2>The quick answer</h2></div>
+    <p class="ch-sub">Two different tools for two different jobs.</p>
+    <div class="grid c2">
+      <div class="card reta rv">
+        <h3>Retatrutide <span class="tag r">investigational</span></h3>
+        <p><strong>Primarily studied as a broad weight-loss and metabolic therapy.</strong> A triple-receptor agonist (GIP + GLP-1 + glucagon) investigated for substantial reductions in overall body weight, appetite, and multiple abdominal fat compartments.</p>
+        <p class="bigline" style="color:var(--reta)">−24.2%</p>
+        <p style="font-size:13px">mean body-weight change at 48 weeks, 12-mg group, Phase 2 obesity trial</p>
+      </div>
+      <div class="card tesa rv">
+        <h3>Tesamorelin <span class="tag t">FDA-approved*</span></h3>
+        <p><strong>Particularly studied for reducing visceral adipose tissue.</strong> A GHRH analogue that stimulates the body's own growth-hormone release, shifting fat metabolism with a preferential effect on deep abdominal (visceral) fat.</p>
+        <p class="bigline" style="color:var(--tesa)">−15.2%</p>
+        <p style="font-size:13px">visceral-fat change at 26 weeks, 2 mg/day, HIV abdominal-fat trial</p>
+      </div>
+    </div>
+    <div class="card rv" style="margin-top:16px">
+      <p class="bigline">These are <span class="hl-t">different approaches</span> to body-fat reduction — <span class="hl-r">not two versions of the same drug</span>.</p>
+      <p style="font-size:13px">*Approved for reduction of excess abdominal fat in HIV-associated lipodystrophy — a specific use, not general weight loss.</p>
+    </div>
+  </section>
+
+  <div class="diagram rv">
+    <p class="d-title">Two different tools</p>
+    <svg viewBox="0 0 640 280" role="img" aria-label="Diagram: one goal of less body fat splitting into two different biological paths">
+      <text x="320" y="34" text-anchor="middle" font-size="15" class="dt">the goal: less body fat</text>
+      <circle cx="320" cy="70" r="26" fill="#151110" stroke="#a8a094" stroke-width="2"/>
+      <text x="320" y="78" text-anchor="middle" font-size="18">🎯</text>
+      <path d="M300 92 C 220 120, 180 140, 140 170" fill="none" stroke="#fb923c" stroke-width="2.5" class="flow"/>
+      <path d="M340 92 C 420 120, 460 140, 500 170" fill="none" stroke="#38bdf8" stroke-width="2.5" class="flow"/>
+      <g>
+        <rect x="60" y="180" width="160" height="76" rx="12" fill="#fb923c10" stroke="#fb923c66"/>
+        <text x="140" y="208" text-anchor="middle" font-size="14" class="dt">Tesamorelin path</text>
+        <text x="140" y="230" text-anchor="middle" font-size="12" class="dm">GH signaling →</text>
+        <text x="140" y="246" text-anchor="middle" font-size="12" class="dm">visceral-fat focus</text>
+      </g>
+      <g>
+        <rect x="420" y="180" width="160" height="76" rx="12" fill="#38bdf810" stroke="#38bdf866"/>
+        <text x="500" y="208" text-anchor="middle" font-size="14" class="dt">Retatrutide path</text>
+        <text x="500" y="230" text-anchor="middle" font-size="12" class="dm">gut-hormone signaling →</text>
+        <text x="500" y="246" text-anchor="middle" font-size="12" class="dm">broad weight loss</text>
+      </g>
+    </svg>
+    <p class="d-cap">Same destination, <strong>different biology</strong> — which is why "which is better?" needs a "for what?" first.</p>
+  </div>
+
+  <!-- 02 -->
+  <section class="chapter" id="ch2">
+    <div class="ch-head"><span class="ch-num mix">02</span><h2>What are they?</h2></div>
+    <p class="ch-sub">Each compound in plain language.</p>
+    <div class="grid c2">
+      <div class="card reta rv">
+        <h3>Retatrutide <span class="tag r">investigational</span></h3>
+        <p><strong>What it is:</strong> an investigational medicine that activates three hormone receptors at once — <strong>GIP, GLP-1, and glucagon</strong> (a "triple agonist").</p>
+        <p><strong>What it acts on:</strong> the body's appetite and metabolic signaling systems — gut-brain pathways that control hunger, food intake, and energy balance.</p>
+        <p><strong>What it's studied for:</strong> obesity and weight management, plus broader metabolic effects. The main human data come from Phase 2 trials.</p>
+        <p><strong>How it differs:</strong> it works through incretin/glucagon hormone pathways — nothing to do with growth hormone.</p>
+      </div>
+      <div class="card tesa rv">
+        <h3>Tesamorelin <span class="tag t">FDA-approved*</span></h3>
+        <p><strong>What it is:</strong> a synthetic analogue of <strong>GHRH</strong> (growth-hormone-releasing hormone), approved as a prescription medicine (Egrifta).</p>
+        <p><strong>What it acts on:</strong> the pituitary gland — prompting the body to release more of its <strong>own growth hormone</strong>, which raises IGF-1 and shifts how fat is metabolized.</p>
+        <p><strong>What it's used for:</strong> reducing excess abdominal fat in adults with <strong>HIV-associated lipodystrophy</strong> — its approved, studied population.</p>
+        <p><strong>How it differs:</strong> it works through the growth-hormone axis — nothing to do with appetite hormones.</p>
+      </div>
+    </div>
+    <div class="warn rv"><strong>Neither mechanism is "more established" than the other in a general sense</strong> — tesamorelin's pathway is established in its approved use; retatrutide's triple-agonist effects are supported by Phase 2 human trials but the drug itself remains investigational.</div>
+  </section>
+
+  <!-- 03 -->
+  <section class="chapter" id="ch3">
+    <div class="ch-head"><span class="ch-num mix">03</span><h2>How do they affect fat?</h2></div>
+    <p class="ch-sub">Not all body fat is the same tissue. Tap a focus to see where each compound's research concentrates.</p>
+    <div class="diagram rv">
+      <p class="d-title">Where does the fat go? — interactive</p>
+      <div class="body-toggle" role="group" aria-label="Highlight research focus">
+        <button id="btTesa" class="sel-t">Tesamorelin focus</button>
+        <button id="btReta">Retatrutide focus</button>
+        <button id="btBoth">Both</button>
+      </div>
+      <svg viewBox="0 0 640 360" role="img" aria-label="Simplified body diagram showing visceral, subcutaneous abdominal, liver, and general fat compartments">
+        <g>
+          <circle cx="320" cy="52" r="26" fill="#151110" stroke="#2b2320" stroke-width="2"/>
+          <rect x="252" y="88" width="136" height="230" rx="60" fill="#151110" stroke="#2b2320" stroke-width="2"/>
+          <rect x="196" y="110" width="34" height="130" rx="17" fill="#151110" stroke="#2b2320" stroke-width="2"/>
+          <rect x="410" y="110" width="34" height="130" rx="17" fill="#151110" stroke="#2b2320" stroke-width="2"/>
+        </g>
+        <g id="compSubq" class="comp">
+          <rect x="266" y="150" width="108" height="150" rx="46" fill="none" stroke="#38bdf8" stroke-width="10" opacity=".8"/>
+          <text x="470" y="200" font-size="13" class="dm">subcutaneous</text>
+          <text x="470" y="218" font-size="13" class="dm">abdominal fat</text>
+          <line x1="380" y1="205" x2="462" y2="205" stroke="#38bdf8" stroke-width="1.5"/>
+        </g>
+        <g id="compVisc" class="comp">
+          <ellipse cx="320" cy="225" rx="38" ry="58" fill="#fb923c33" stroke="#fb923c" stroke-width="3" class="d-pulse"/>
+          <text x="120" y="230" font-size="13" class="dm" text-anchor="end">visceral fat</text>
+          <text x="120" y="248" font-size="13" class="dm" text-anchor="end">(deep abdominal)</text>
+          <line x1="128" y1="232" x2="276" y2="232" stroke="#fb923c" stroke-width="1.5"/>
+        </g>
+        <g id="compLiver" class="comp">
+          <ellipse cx="352" cy="140" rx="20" ry="14" fill="#a3e63522" stroke="#a3e635" stroke-width="2"/>
+          <text x="470" y="140" font-size="13" class="dm">liver fat</text>
+          <line x1="376" y1="140" x2="462" y2="140" stroke="#a3e635" stroke-width="1.5"/>
+        </g>
+        <g id="compGen" class="comp">
+          <circle cx="213" cy="175" r="14" fill="none" stroke="#6f675e" stroke-width="3" stroke-dasharray="4 3"/>
+          <circle cx="427" cy="175" r="14" fill="none" stroke="#6f675e" stroke-width="3" stroke-dasharray="4 3"/>
+          <text x="320" y="344" text-anchor="middle" font-size="12.5" class="dm">general subcutaneous fat (limbs etc.)</text>
+        </g>
+        <text id="bodyNote" x="320" y="30" text-anchor="middle" font-size="14" class="dt">Tesamorelin research emphasizes visceral fat</text>
+      </svg>
+      <p class="d-cap">Simplified illustration — compartments not to scale. <strong>Effects were measured in different studies, in different people.</strong> Tesamorelin's trials showed visceral-fat reduction with subcutaneous fat largely preserved; retatrutide's research showed reductions across visceral <em>and</em> abdominal subcutaneous fat.</p>
+    </div>
+  </section>
+
+  <!-- 04 -->
+  <section class="chapter" id="ch4">
+    <div class="ch-head"><span class="ch-num mix">04</span><h2>Mechanism of action</h2></div>
+    <p class="ch-sub">Two biological pathways, side by side. Simplified — as all diagrams of complex biology must be.</p>
+    <div class="grid c2">
+      <div class="diagram rv" style="margin:0">
+        <p class="d-title" style="color:var(--reta)">Retatrutide pathway</p>
+        <svg viewBox="0 0 400 380" role="img" aria-label="Animated simplified retatrutide mechanism: three receptors to appetite and metabolic signaling to weight and fat reduction">
+          <g font-size="13">
+            <g class="d-pulse"><rect x="30" y="20" width="100" height="44" rx="12" fill="#38bdf814" stroke="#38bdf8" stroke-width="1.6"/><text x="80" y="47" text-anchor="middle" class="dt">GIP</text></g>
+            <g class="d-pulse" style="animation-delay:.6s"><rect x="150" y="20" width="100" height="44" rx="12" fill="#38bdf814" stroke="#38bdf8" stroke-width="1.6"/><text x="200" y="47" text-anchor="middle" class="dt">GLP-1</text></g>
+            <g class="d-pulse" style="animation-delay:1.2s"><rect x="270" y="20" width="100" height="44" rx="12" fill="#38bdf814" stroke="#38bdf8" stroke-width="1.6"/><text x="320" y="47" text-anchor="middle" class="dt">glucagon</text></g>
+          </g>
+          <text x="200" y="92" text-anchor="middle" font-size="11.5" class="dm">receptors activated</text>
+          <g stroke="#38bdf8" stroke-width="2.5" fill="none">
+            <path d="M80 64 L 170 120" class="flow"/><path d="M200 64 L 200 120" class="flow"/><path d="M320 64 L 230 120" class="flow"/>
+          </g>
+          <rect x="90" y="120" width="220" height="64" rx="12" fill="#38bdf80d" stroke="#38bdf855"/>
+          <text x="200" y="145" text-anchor="middle" font-size="13" class="dt">appetite · metabolic</text>
+          <text x="200" y="165" text-anchor="middle" font-size="13" class="dt">signaling · energy balance</text>
+          <path d="M200 184 L 200 214" stroke="#38bdf8" stroke-width="2.5" class="flow"/>
+          <rect x="70" y="214" width="260" height="64" rx="12" fill="#38bdf814" stroke="#38bdf8" stroke-width="1.6"/>
+          <text x="200" y="240" text-anchor="middle" font-size="13.5" class="dt">weight &amp; body-fat</text>
+          <text x="200" y="260" text-anchor="middle" font-size="13.5" class="dt">reduction</text>
+          <text x="200" y="310" text-anchor="middle" font-size="12" class="dm">broad, multi-compartment</text>
+          <text x="200" y="330" text-anchor="middle" font-size="12" class="dm">effect in trials</text>
+          <text x="200" y="362" text-anchor="middle" font-size="11.5" class="dm">simplified mechanism</text>
+        </svg>
+      </div>
+      <div class="diagram rv" style="margin:0">
+        <p class="d-title" style="color:var(--tesa)">Tesamorelin pathway</p>
+        <svg viewBox="0 0 400 380" role="img" aria-label="Animated simplified tesamorelin mechanism: GHRH receptor to growth hormone to IGF-1 to visceral fat reduction">
+          <rect x="130" y="20" width="140" height="44" rx="12" fill="#fb923c14" stroke="#fb923c" stroke-width="1.6" class="d-pulse"/>
+          <text x="200" y="47" text-anchor="middle" font-size="13.5" class="dt">tesamorelin</text>
+          <path d="M200 64 L 200 94" stroke="#fb923c" stroke-width="2.5" class="flow"/>
+          <rect x="110" y="94" width="180" height="52" rx="12" fill="#fb923c0d" stroke="#fb923c66"/>
+          <text x="200" y="115" text-anchor="middle" font-size="13" class="dt">GHRH receptor</text>
+          <text x="200" y="134" text-anchor="middle" font-size="11.5" class="dm">pituitary</text>
+          <path d="M200 146 L 200 176" stroke="#fb923c" stroke-width="2.5" class="flow"/>
+          <g class="d-bob"><rect x="120" y="176" width="160" height="44" rx="22" fill="#fb923c14" stroke="#fb923c" stroke-width="1.6"/><text x="200" y="203" text-anchor="middle" font-size="13" class="dt">growth hormone ↑</text></g>
+          <path d="M200 220 L 200 250" stroke="#fb923c" stroke-width="2.5" class="flow"/>
+          <rect x="140" y="250" width="120" height="44" rx="12" fill="#fb923c0d" stroke="#fb923c66"/>
+          <text x="200" y="277" text-anchor="middle" font-size="13" class="dt">IGF-1 ↑</text>
+          <path d="M200 294 L 200 318" stroke="#fb923c" stroke-width="2.5" class="flow"/>
+          <text x="200" y="340" text-anchor="middle" font-size="13.5" class="dt">preferential visceral-fat</text>
+          <text x="200" y="360" text-anchor="middle" font-size="13.5" class="dt">reduction</text>
+        </svg>
+      </div>
+    </div>
+    <p class="d-cap rv" style="font-size:13.5px; color:var(--muted)">Both diagrams are <strong style="color:var(--text)">simplified</strong> — real biology involves many more steps, feedback loops, and individual variation.</p>
+  </section>
+
+  <div class="diagram rv">
+    <p class="d-title">Two different paths</p>
+    <svg viewBox="0 0 640 240" role="img" aria-label="Split pathway: gut-hormone signaling versus growth-hormone signaling">
+      <g>
+        <rect x="30" y="80" width="270" height="80" rx="12" fill="#38bdf80d" stroke="#38bdf855"/>
+        <text x="165" y="108" text-anchor="middle" font-size="14" class="dt">gut-hormone signaling</text>
+        <text x="165" y="130" text-anchor="middle" font-size="12" class="dm">GIP · GLP-1 · glucagon</text>
+        <text x="165" y="148" text-anchor="middle" font-size="12" class="dm">→ appetite &amp; energy balance</text>
+      </g>
+      <g>
+        <rect x="340" y="80" width="270" height="80" rx="12" fill="#fb923c0d" stroke="#fb923c55"/>
+        <text x="475" y="108" text-anchor="middle" font-size="14" class="dt">growth-hormone signaling</text>
+        <text x="475" y="130" text-anchor="middle" font-size="12" class="dm">GHRH receptor → GH → IGF-1</text>
+        <text x="475" y="148" text-anchor="middle" font-size="12" class="dm">→ fat-metabolism shift</text>
+      </g>
+      <text x="320" y="60" text-anchor="middle" font-size="13" class="dm">no shared pathway —</text>
+      <text x="320" y="200" text-anchor="middle" font-size="13.5" class="dt">comparing them is comparing strategies, not doses</text>
+    </svg>
+    <p class="d-cap"><strong>Comparing them is comparing strategies, not doses.</strong></p>
+  </div>
+
+  <!-- 05 -->
+  <section class="chapter" id="ch5">
+    <div class="ch-head"><span class="ch-num mix">05</span><h2>Who is each one for?</h2></div>
+    <p class="ch-sub">Relatable profiles — interest-framed, not prescriptions. Clinical appropriateness always depends on the individual and medical context.</p>
+    <div class="grid c2">
+      <div>
+        <p style="font-size:13px; font-weight:800; letter-spacing:1.4px; text-transform:uppercase; color:var(--tesa); margin-bottom:12px">Tesamorelin may interest someone who…</p>
+        <div class="grid" style="gap:12px">
+          <div class="card profile tesa rv"><span class="pdot"></span><h3>The waistline watcher</h3><p>Is primarily concerned about excess abdominal / visceral fat — and has relatively little interest in losing large amounts of total body weight.</p></div>
+          <div class="card profile tesa rv"><span class="pdot"></span><h3>Lean but central</h3><p>Is already relatively lean overall, yet carries disproportionate fat around the midsection.</p></div>
+          <div class="card profile tesa rv"><span class="pdot"></span><h3>The composition researcher</h3><p>Is researching body-composition changes — where fat sits — rather than simply driving the scale number down.</p></div>
+        </div>
+      </div>
+      <div>
+        <p style="font-size:13px; font-weight:800; letter-spacing:1.4px; text-transform:uppercase; color:var(--reta); margin-bottom:12px">Retatrutide may be relevant to someone who…</p>
+        <div class="grid" style="gap:12px">
+          <div class="card profile reta rv"><span class="pdot"></span><h3>The big-picture loser</h3><p>Has a larger amount of total body fat to lose and wants a broad, multi-compartment effect.</p></div>
+          <div class="card profile reta rv"><span class="pdot"></span><h3>The appetite battler</h3><p>Struggles with appetite and food intake — an area central to how retatrutide is being investigated.</p></div>
+          <div class="card profile reta rv"><span class="pdot"></span><h3>The metabolic resetter</h3><p>Wants wider weight-loss plus metabolic effects across body weight and several abdominal fat compartments.</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="warn rv"><strong>These are interest profiles, not recommendations.</strong> Whether any treatment is appropriate depends on the individual, their medical history, and a clinician's judgment.</div>
+  </section>
+
+  <div class="diagram rv">
+    <p class="d-title">Weight vs visceral fat — the scale that matters</p>
+    <svg viewBox="0 0 640 260" role="img" aria-label="Balance scale showing total body weight on one side and visceral fat on the other, independent of each other">
+      <line x1="320" y1="40" x2="320" y2="120" stroke="#a8a094" stroke-width="4"/>
+      <line x1="140" y1="120" x2="500" y2="120" stroke="#a8a094" stroke-width="4" stroke-linecap="round"/>
+      <g class="d-bob" style="animation-duration:4s">
+        <line x1="180" y1="120" x2="180" y2="150" stroke="#a8a094" stroke-width="2.5"/>
+        <rect x="110" y="150" width="140" height="56" rx="12" fill="#38bdf80d" stroke="#38bdf855"/>
+        <text x="180" y="174" text-anchor="middle" font-size="13" class="dt">total body weight</text>
+        <text x="180" y="194" text-anchor="middle" font-size="11.5" class="dm">the number on the scale</text>
+      </g>
+      <g class="d-bob" style="animation-duration:4s; animation-delay:2s">
+        <line x1="460" y1="120" x2="460" y2="150" stroke="#a8a094" stroke-width="2.5"/>
+        <rect x="390" y="150" width="140" height="56" rx="12" fill="#fb923c0d" stroke="#fb923c55"/>
+        <text x="460" y="174" text-anchor="middle" font-size="13" class="dt">visceral fat</text>
+        <text x="460" y="194" text-anchor="middle" font-size="11.5" class="dm">deep abdominal tissue</text>
+      </g>
+      <text x="320" y="240" text-anchor="middle" font-size="13.5" class="dt">the two pans move independently</text>
+    </svg>
+    <p class="d-cap">A treatment can shrink <strong>visceral fat</strong> without moving <strong>total weight</strong> much — and vice versa.</p>
+  </div>
+
+  <!-- 06 -->
+  <section class="chapter" id="ch6">
+    <div class="ch-head"><span class="ch-num mix">06</span><h2>Which one burns more fat?</h2></div>
+    <p class="ch-sub">First, separate two different measurements.</p>
+    <div class="grid c2">
+      <div class="card rv">
+        <h3>Losing body weight</h3>
+        <p>The total mass change on the scale — fat, water, lean tissue combined. This is what large obesity trials measure best, and it's where retatrutide's research is strongest: <strong>mean −24.2% body weight at 48 weeks</strong> in the 12-mg Phase 2 group.</p>
+      </div>
+      <div class="card rv">
+        <h3>Reducing visceral fat</h3>
+        <p>The shrinkage of deep abdominal fat specifically, measured by imaging (CT/MRI). This is tesamorelin's home turf: <strong>−15.2% visceral adipose tissue at 26 weeks</strong> — while total body weight barely moved in the same trial.</p>
+      </div>
+    </div>
+    <div class="bigwarn rv">
+      <h3>⚠️ Don't equate the two</h3>
+      <p><strong>More weight lost ≠ automatically better visceral-fat reduction.</strong> These are related but different measurements. In the tesamorelin pivotal trial, BMI changed by only −0.4% (vs +0.1% placebo) — yet visceral fat fell 15.2%. Judging tesamorelin by the scale alone would miss its entire effect.</p>
+    </div>
+  </section>
+
+  <!-- 07 -->
+  <section class="chapter" id="ch7">
+    <div class="ch-head"><span class="ch-num mix">07</span><h2>Numbers you should know</h2></div>
+    <p class="ch-sub">Real results from human trials — each with the context that makes it meaningful. <strong>Body-weight change is not the same as body-fat change.</strong></p>
+    <div class="num-grid">
+      <div class="num-tile rv" style="--nc:var(--reta)">
+        <div class="nv"><span class="count" data-to="24.2" data-dec="1" data-prefix="−" data-suffix="%">−0%</span></div>
+        <div class="nl">Mean body-weight change</div>
+        <div class="nc"><strong>Retatrutide 12 mg</strong> · 48 weeks · Phase 2 obesity trial (n=338) · least-squares mean · placebo −2.1%</div>
+      </div>
+      <div class="num-tile rv" style="--nc:var(--reta)">
+        <div class="nv"><span class="count" data-to="83" data-dec="0" data-suffix="%">0%</span></div>
+        <div class="nl">Lost ≥15% body weight</div>
+        <div class="nc"><strong>Retatrutide 12 mg</strong> · 48 weeks · vs 2% placebo · 8-mg: 75% · 4-mg: 60%</div>
+      </div>
+      <div class="num-tile rv" style="--nc:var(--reta)">
+        <div class="nv"><span class="count" data-to="63" data-dec="0" data-suffix="%">0%</span></div>
+        <div class="nl">Lost ≥20% body weight</div>
+        <div class="nc"><strong>Retatrutide 12 mg</strong> · 48 weeks · vs 1% placebo · 26% of the group lost ≥30%</div>
+      </div>
+      <div class="num-tile rv" style="--nc:var(--reta)">
+        <div class="nv"><span class="count" data-to="19.6" data-dec="1" data-prefix="−" data-suffix=" cm">−0 cm</span></div>
+        <div class="nl">Waist reduction (top of range)</div>
+        <div class="nc"><strong>Retatrutide groups</strong>: −6.5 to −19.6 cm · 48 weeks · placebo −2.6 cm</div>
+      </div>
+      <div class="num-tile rv" style="--nc:var(--tesa)">
+        <div class="nv"><span class="count" data-to="15.2" data-dec="1" data-prefix="−" data-suffix="%">−0%</span></div>
+        <div class="nl">Visceral-fat change</div>
+        <div class="nc"><strong>Tesamorelin 2 mg/day</strong> · 26 weeks · HIV abdominal-fat trial (n=412) · CT-measured VAT</div>
+      </div>
+      <div class="num-tile rv" style="--nc:var(--tesa)">
+        <div class="nv"><span class="count" data-to="5" data-dec="1" data-prefix="+" data-suffix="%">+0%</span></div>
+        <div class="nl">Visceral-fat change, placebo</div>
+        <div class="nc"><strong>Same trial</strong> · ≈20-point gap vs tesamorelin · VAT grew on placebo</div>
+      </div>
+      <div class="num-tile rv" style="--nc:var(--tesa)">
+        <div class="nv"><span class="count" data-to="50" data-dec="0" data-prefix="−" data-suffix=" mg/dL">−0</span></div>
+        <div class="nl">Triglyceride change</div>
+        <div class="nc"><strong>Tesamorelin</strong> · vs +9 mg/dL placebo · same 26-week trial</div>
+      </div>
+      <div class="num-tile rv" style="--nc:var(--muted)">
+        <div class="nv" style="font-size:clamp(30px,3.6vw,40px)">412 <span style="font-size:.55em">vs</span> 338</div>
+        <div class="nl">Trial sizes</div>
+        <div class="nc"><strong>Tesamorelin pivotal: 412</strong> · <strong>Retatrutide Phase 2: 338</strong> · different studies, different people</div>
+      </div>
+    </div>
+    <div class="warn rv"><strong>Read every tile twice:</strong> the number <em>and</em> the fine print. −24.2% is <strong>body weight</strong>; −15.2% is <strong>visceral fat</strong>. Different endpoints, different populations, different durations.</div>
+  </section>
+
+  <!-- 08 -->
+  <section class="chapter" id="ch8">
+    <div class="ch-head"><span class="ch-num mix">08</span><h2>Evidence comparison</h2></div>
+    <p class="ch-sub">Tap any row for the supporting detail.</p>
+    <div class="ev-table rv" id="evTable">
+      <div class="ev-head"><div>Category</div><div class="hc-t">Tesamorelin</div><div class="hc-r">Retatrutide</div></div>
+      <div class="ev-row"><div class="rc">Primary research focus</div><div class="rv-t">Visceral adipose tissue</div><div class="rv-r">Weight loss / metabolic effects</div><div class="ev-detail">Tesamorelin's pivotal program targeted abdominal fat in HIV-associated lipodystrophy; retatrutide's Phase 2 program targeted obesity and weight management.</div></div>
+      <div class="ev-row"><div class="rc">Visceral fat</div><div class="rv-t">Strong evidence in studied populations</div><div class="rv-r">Significant reductions demonstrated</div><div class="ev-detail">Tesamorelin: −15.2% VAT at 26 weeks in its pivotal trial. Retatrutide: VAT reductions observed in Phase 2 research, increasing with dose and duration.</div></div>
+      <div class="ev-row"><div class="rc">Subcutaneous abdominal fat</div><div class="rv-t">More limited effect</div><div class="rv-r">Significant reductions demonstrated</div><div class="ev-detail">Tesamorelin trials showed subcutaneous fat largely preserved; retatrutide research showed abdominal subcutaneous-fat reductions.</div></div>
+      <div class="ev-row"><div class="rc">Total body weight</div><div class="rv-t">Not its primary strength</div><div class="rv-r">Major area of investigation</div><div class="ev-detail">Tesamorelin: BMI changed −0.4% in the pivotal trial — the scale barely moved. Retatrutide: up to −24.2% mean weight change at 48 weeks.</div></div>
+      <div class="ev-row"><div class="rc">Appetite effects</div><div class="rv-t">Not a primary mechanism</div><div class="rv-r">Important component</div><div class="ev-detail">Appetite reduction is central to retatrutide's investigated mechanism; tesamorelin acts through the growth-hormone axis.</div></div>
+      <div class="ev-row"><div class="rc">Liver fat</div><div class="rv-t">Evidence exists</div><div class="rv-r">Evidence exists</div><div class="ev-detail">Tesamorelin: VAT loss linked to improved liver enzymes in HIV studies. Retatrutide: liver-fat reductions observed in its Phase 2 diabetes research.</div></div>
+      <div class="ev-row"><div class="rc">Human clinical evidence</div><div class="rv-t">Established, incl. Phase 3</div><div class="rv-r">Extensive but investigational</div><div class="ev-detail">Tesamorelin: FDA-approved 2010 for its specific use. Retatrutide: Phase 2/3 research ongoing — not approved.</div></div>
+      <div class="ev-row"><div class="rc">Direct head-to-head comparison</div><div class="rv-t">None</div><div class="rv-r">None</div><div class="ev-detail">No trial has directly compared them. Every contrast on this page is across separate studies.</div></div>
+    </div>
+  </section>
+
+  <!-- 09 -->
+  <section class="chapter" id="ch9">
+    <div class="ch-head"><span class="ch-num mix">09</span><h2>What the research actually shows</h2></div>
+    <p class="ch-sub">The key trials, with their populations attached — because the population <em>is</em> the context.</p>
+    <div class="grid c2">
+      <div class="card reta rv">
+        <h3>Retatrutide — Phase 2 obesity trial <span class="tag r">NEJM 2023</span></h3>
+        <p><strong>338 adults</strong> with obesity, <strong>48 weeks</strong>, randomized, double-blind. Least-squares mean body-weight change:</p>
+        <ul>
+          <li><strong>12 mg: −24.2%</strong> · 8 mg: −22.8% · 4 mg: −17.1% · 1 mg: −8.7% · <strong>placebo: −2.1%</strong></li>
+          <li>≥15% weight loss: <strong>83%</strong> (12 mg) · 75% (8 mg) · 60% (4 mg) · 2% placebo</li>
+          <li>≥10% weight loss: 93% (12 mg) · 91% (8 mg) · 75% (4 mg) · 9% placebo</li>
+          <li>Waist: <strong>−6.5 to −19.6 cm</strong> across retatrutide groups vs −2.6 cm placebo</li>
+          <li>Most common side effects: <strong>gastrointestinal</strong>, dose-related, mostly mild–moderate</li>
+          <li>Dose-dependent <strong>heart-rate increase</strong> peaked at 24 weeks, then declined</li>
+        </ul>
+      </div>
+      <div class="card tesa rv">
+        <h3>Tesamorelin — pivotal Phase 3 program <span class="tag t">26-week trials</span></h3>
+        <p><strong>412 adults</strong> with HIV-associated abdominal fat accumulation, <strong>26 weeks</strong>, 2 mg/day, randomized, double-blind, placebo-controlled:</p>
+        <ul>
+          <li><strong>Visceral fat: −15.2%</strong> vs <strong>+5.0%</strong> placebo (≈20-point gap)</li>
+          <li>Waist circumference: −2.5% vs −0.8% placebo</li>
+          <li>Triglycerides: <strong>−50 mg/dL</strong> vs +9 mg/dL placebo</li>
+          <li>BMI: −0.4% vs +0.1% — <strong>weight barely moved</strong></li>
+          <li>Subcutaneous fat: largely <strong>preserved</strong></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="diagram rv">
+    <p class="d-title">Don't rank these</p>
+    <svg viewBox="0 0 640 300" role="img" aria-label="Diagram: minus 24.2 percent body weight versus minus 15.2 percent visceral fat are not directly comparable">
+      <g>
+        <rect x="40" y="70" width="220" height="130" rx="14" fill="#38bdf80d" stroke="#38bdf8" stroke-width="2"/>
+        <text x="150" y="115" text-anchor="middle" font-size="38" font-weight="900" fill="#38bdf8">−24.2%</text>
+        <text x="150" y="145" text-anchor="middle" font-size="13" class="dt">body WEIGHT</text>
+        <text x="150" y="165" text-anchor="middle" font-size="12" class="dm">48 weeks · obesity trial</text>
+        <rect x="70" y="180" width="160" height="8" rx="4" fill="#38bdf833"/>
+      </g>
+      <text x="320" y="150" text-anchor="middle" font-size="44" font-weight="900" fill="#f87171">≠</text>
+      <g>
+        <rect x="380" y="70" width="220" height="130" rx="14" fill="#fb923c0d" stroke="#fb923c" stroke-width="2"/>
+        <text x="490" y="115" text-anchor="middle" font-size="38" font-weight="900" fill="#fb923c">−15.2%</text>
+        <text x="490" y="145" text-anchor="middle" font-size="13" class="dt">VISCERAL fat</text>
+        <text x="490" y="165" text-anchor="middle" font-size="12" class="dm">26 weeks · HIV fat trial</text>
+        <ellipse cx="490" cy="184" rx="60" ry="8" fill="#fb923c33"/>
+      </g>
+      <text x="320" y="248" text-anchor="middle" font-size="14" class="dt">different rulers, different races</text>
+    </svg>
+    <p class="d-cap"><strong>−24.2%</strong> measures body weight. <strong>−15.2%</strong> measures visceral fat. <strong>Ranking them is scientifically meaningless.</strong></p>
+  </div>
+
+  <!-- 10 -->
+  <section class="chapter" id="ch10">
+    <div class="ch-head"><span class="ch-num mix">10</span><h2>Limitations</h2></div>
+    <p class="ch-sub">Why "X% vs Y%" comparisons between these studies mislead.</p>
+    <div class="bigwarn rv">
+      <h3>⚠️ Don't compare these numbers directly</h3>
+      <p>Taking "−24.2%" from one study and "−15.2%" from another and declaring a winner ignores everything that makes trials comparable:</p>
+      <ul>
+        <li><strong>Different populations</strong> — adults with obesity vs adults with HIV-associated abdominal fat accumulation</li>
+        <li><strong>Different study designs</strong> — Phase 2 dose-ranging vs pivotal Phase 3 program</li>
+        <li><strong>Different doses</strong> — escalating weekly regimens vs fixed 2 mg daily</li>
+        <li><strong>Different durations</strong> — 48 weeks vs 26 weeks</li>
+        <li><strong>Different endpoints</strong> — body-weight change vs CT-measured visceral-fat change</li>
+        <li><strong>Different baselines</strong> — different starting body composition and metabolic status</li>
+        <li><strong>Different objectives</strong> — broad weight management vs targeted visceral-fat reduction</li>
+      </ul>
+      <p style="margin-top:10px">A fair comparison would need the same people, same measurements, same timeframe — <strong>that trial doesn't exist</strong>.</p>
+    </div>
+  </section>
+
+  <!-- 11 -->
+  <section class="chapter" id="ch11">
+    <div class="ch-head"><span class="ch-num mix">11</span><h2>Safety &amp; important considerations</h2></div>
+    <p class="ch-sub">Concise and evidence-based. Established information vs investigational unknowns are labeled as such.</p>
+    <div class="grid c2">
+      <div class="card tesa rv">
+        <h3>Tesamorelin <span class="tag t">established</span></h3>
+        <ul>
+          <li><strong>Injection-site reactions</strong> — redness, itching, pain, swelling; among the most common effects</li>
+          <li><strong>IGF-1 elevation</strong> — expected from its mechanism; monitored in trials</li>
+          <li>Joint and muscle aches, swelling of hands/feet reported</li>
+          <li><strong>Contraindicated</strong> with active cancer, in pregnancy, and with hypersensitivity to the drug</li>
+          <li>Glucose should be monitored — GH-axis drugs can affect insulin sensitivity</li>
+        </ul>
+      </div>
+      <div class="card reta rv">
+        <h3>Retatrutide <span class="tag r">investigational</span></h3>
+        <ul>
+          <li><strong>Gastrointestinal effects</strong> most common — nausea, vomiting, diarrhea; dose-related, mostly mild–moderate</li>
+          <li>Appetite reduction and injection-site reactions also reported</li>
+          <li><strong>Heart-rate increase</strong> observed — dose-dependent, peaked at 24 weeks then declined</li>
+          <li><strong>Long-term risks unknown</strong> — the drug is still in clinical development</li>
+          <li>Safety profile beyond trials is, by definition, incomplete</li>
+        </ul>
+      </div>
+    </div>
+    <div class="warn rv"><strong>Established vs unknown:</strong> tesamorelin's considerations come from an approved label and years of use in its indication. Retatrutide's come from clinical-trial data — <strong>theoretical or long-term concerns remain speculative until more data exist</strong>.</div>
+  </section>
+
+  <!-- 12 -->
+  <section class="chapter" id="ch12">
+    <div class="ch-head"><span class="ch-num mix">12</span><h2>Final verdict</h2></div>
+    <p class="ch-sub">Answer "better for what?" — then pick a goal below to see where the research focus lies. This is a research summary, not a recommendation engine.</p>
+    <div class="grid c3">
+      <div class="card rv">
+        <h3 style="color:var(--reta)">Broader weight loss?</h3>
+        <p>→ <strong>Retatrutide</strong> has the stronger research focus, with large mean weight reductions in its Phase 2 obesity trial.</p>
+      </div>
+      <div class="card rv">
+        <h3 style="color:var(--tesa)">Visceral fat specifically?</h3>
+        <p>→ <strong>Tesamorelin</strong> has particularly strong evidence for visceral-fat reduction in its studied populations.</p>
+      </div>
+      <div class="card rv">
+        <h3>Universally better?</h3>
+        <p>→ <strong>There is no scientifically valid universal winner.</strong> No head-to-head trial exists.</p>
+      </div>
+    </div>
+    <div class="card rv" style="margin-top:16px">
+      <h3>Better for what? — pick a goal</h3>
+      <div class="goal-btns" role="group" aria-label="Choose a goal">
+        <button data-goal="weight" class="sel">Overall weight loss</button>
+        <button data-goal="visceral">Visceral fat</button>
+        <button data-goal="abdominal">Abdominal fat</button>
+        <button data-goal="appetite">Appetite</button>
+        <button data-goal="composition">Body composition</button>
+      </div>
+      <div class="goal-out" id="goalOut" aria-live="polite"></div>
+      <p class="goal-note">Research focus — not a medical recommendation. Individual suitability depends on medical context and a clinician's judgment.</p>
+    </div>
+    <div class="card rv" style="margin-top:16px">
+      <p class="bigline">Retatrutide and tesamorelin are <strong>not really competing versions of the same treatment</strong>.</p>
+      <p>They approach body composition through <span class="hl-r"><strong>different biological pathways</strong></span> and have been studied for <span class="hl-t"><strong>different goals</strong></span>.</p>
+    </div>
+  </section>
+
+  <!-- 13 -->
+  <section class="chapter" id="ch13">
+    <div class="ch-head"><span class="ch-num mix">13</span><h2>Key studies &amp; sources</h2></div>
+    <p class="ch-sub">Every major number on this page traces back to one of these.</p>
+    <div class="src rv">
+      <strong>[1] Retatrutide Phase 2 obesity trial.</strong> Jastreboff AM, et al. "Triple–Hormone-Receptor Agonist Retatrutide for Obesity — A Phase 2 Trial." <em>N Engl J Med.</em> 2023;389:514–526. 338 adults, 48 weeks. Body-weight, responder, waist, GI and heart-rate findings above come from this trial. DOI: 10.1056/NEJMoa2301972<br>
+      <a href="https://www.nejm.org/doi/full/10.1056/NEJMoa2301972" target="_blank" rel="noopener">nejm.org/doi/full/10.1056/NEJMoa2301972</a>
+    </div>
+    <div class="src rv">
+      <strong>[2] Tesamorelin pivotal Phase 3 program.</strong> Falutz J, et al. Two randomized, double-blind, placebo-controlled trials of tesamorelin 2 mg daily for 26 weeks in adults with HIV-associated abdominal fat accumulation (≈410 participants each). Visceral-fat (−15.2% vs +5.0% placebo), waist, triglyceride, and BMI findings above come from this program (reported in JCEM and related publications).
+    </div>
+    <div class="src rv">
+      <strong>[3] Tesamorelin safety &amp; approved use.</strong> Egrifta (tesamorelin for injection) FDA-approved prescribing information — approved 2010 for reduction of excess abdominal fat in HIV-infected patients with lipodystrophy; contraindications, IGF-1 effects, and injection-site reaction profile.
+    </div>
+  </section>
+
+  <!-- 14 -->
+  <section class="chapter" id="ch14">
+    <div class="ch-head"><span class="ch-num mix">14</span><h2>Understanding the terminology</h2></div>
+    <p class="ch-sub">Six terms, defined twice — once precisely, once plainly.</p>
+    <div class="gloss rv">
+      <div class="g-item">
+        <button class="g-q" aria-expanded="false"><svg class="gthumb v1" viewBox="0 0 42 42"><rect x="3" y="3" width="36" height="36" rx="10" fill="#fb923c22" stroke="#fb923c"/><ellipse cx="21" cy="21" rx="9" ry="12" fill="#fb923c"/><ellipse cx="21" cy="21" rx="4" ry="6" fill="#1d1214"/></svg><span class="term">Visceral adipose tissue (VAT)</span><span class="plus">+</span></button>
+        <div class="g-a">
+          <div class="gsci"><span class="gslabel">Scientific definition</span><strong>Fat stored deep within the abdominal cavity</strong>, surrounding the internal organs — distinct from the fat under the skin. It is metabolically active tissue that secretes inflammatory signals and is more strongly linked to cardiovascular and metabolic risk than subcutaneous fat. Because it sits behind the abdominal wall, it <strong>cannot be measured with a tape measure</strong>; trials quantify it with CT or MRI imaging. Tesamorelin's pivotal trials used single-slice CT to measure VAT area as the primary endpoint.</div>
+          <div class="plain"><span class="plabel">Plain English</span>Visceral fat is the deep belly fat packed around your organs — not the stuff you can pinch. It's the metabolically risky kind, closely tied to heart and metabolic problems. You can't measure it with a tape measure; studies use CT or MRI scans. <strong>This is the fat tesamorelin was specifically shown to shrink.</strong></div>
+        </div>
+      </div>
+      <div class="g-item">
+        <button class="g-q" aria-expanded="false"><svg class="gthumb v2" viewBox="0 0 42 42"><rect x="3" y="3" width="36" height="36" rx="10" fill="#38bdf822" stroke="#38bdf8"/><rect x="10" y="12" width="22" height="18" rx="9" fill="none" stroke="#38bdf8" stroke-width="2.4"/><rect x="15" y="17" width="12" height="8" rx="4" fill="#38bdf8"/></svg><span class="term">Subcutaneous adipose tissue (SAT)</span><span class="plus">+</span></button>
+        <div class="g-a">
+          <div class="gsci"><span class="gslabel">Scientific definition</span><strong>Fat stored directly beneath the skin</strong>, distributed across the body including the abdomen, hips, thighs, and limbs. It serves as insulation and energy storage and carries lower metabolic risk than visceral fat. In the tesamorelin trials, abdominal subcutaneous fat was <strong>largely preserved</strong> while visceral fat fell — evidence the drug's effect is compartment-specific. Retatrutide's research, by contrast, showed reductions in abdominal subcutaneous fat as well.</div>
+          <div class="plain"><span class="plabel">Plain English</span>Subcutaneous fat is the fat right under your skin — the pinchable kind, spread around the body. It's less metabolically risky than the deep stuff. Here's the interesting contrast: <strong>tesamorelin shrank deep fat while mostly leaving this layer alone</strong>, while retatrutide's trials showed this layer shrinking too.</div>
+        </div>
+      </div>
+      <div class="g-item">
+        <button class="g-q" aria-expanded="false"><svg class="gthumb v3" viewBox="0 0 42 42"><rect x="3" y="3" width="36" height="36" rx="10" fill="#a3e63522" stroke="#a3e635"/><circle cx="15" cy="21" r="6" fill="#a3e635"/><rect x="23" y="14" width="10" height="14" rx="3" fill="none" stroke="#a3e635" stroke-width="2.2"/><path d="M28 21 h0" stroke="#a3e635" stroke-width="2.2"/></svg><span class="term">GIP</span><span class="plus">+</span></button>
+        <div class="g-a">
+          <div class="gsci"><span class="gslabel">Scientific definition</span><strong>Glucose-dependent insulinotropic polypeptide</strong> — a gut hormone released after eating that amplifies insulin secretion when blood sugar is elevated. It also acts on brain circuits involved in appetite and on fat tissue directly. GIP receptor activation is one of the three prongs of retatrutide's triple-agonist design, and preclinical work suggests it may <strong>counterbalance some effects</strong> of the other two pathways.</div>
+          <div class="plain"><span class="plabel">Plain English</span>GIP is a gut hormone your body releases after meals — it helps insulin do its job and talks to appetite circuits in the brain. It's <strong>one of the three switches retatrutide flips</strong>, and researchers think it may smooth out the effects of the other two.</div>
+        </div>
+      </div>
+      <div class="g-item">
+        <button class="g-q" aria-expanded="false"><svg class="gthumb v1" viewBox="0 0 42 42"><rect x="3" y="3" width="36" height="36" rx="10" fill="#fb923c22" stroke="#fb923c"/><path d="M12 28 C12 18 18 12 28 12" fill="none" stroke="#fb923c" stroke-width="2.4"/><circle cx="28" cy="12" r="4" fill="#fb923c"/><circle cx="12" cy="28" r="4" fill="#fb923c"/></svg><span class="term">GLP-1</span><span class="plus">+</span></button>
+        <div class="g-a">
+          <div class="gsci"><span class="gslabel">Scientific definition</span><strong>Glucagon-like peptide-1</strong> — a gut hormone that slows stomach emptying, boosts insulin release when glucose is high, suppresses glucagon, and acts on brain appetite centers to reduce hunger and food intake. GLP-1 receptor agonists are the foundation of the modern obesity-medicine class. It is the <strong>second prong</strong> of retatrutide's triple action and the main driver of its appetite effects.</div>
+          <div class="plain"><span class="plabel">Plain English</span>GLP-1 is the famous gut hormone behind the current generation of weight-loss medicines — it slows digestion, curbs hunger signals in the brain, and helps control blood sugar. It's <strong>the second switch retatrutide flips</strong>, and the main reason appetite drops.</div>
+        </div>
+      </div>
+      <div class="g-item">
+        <button class="g-q" aria-expanded="false"><svg class="gthumb v2" viewBox="0 0 42 42"><rect x="3" y="3" width="36" height="36" rx="10" fill="#38bdf822" stroke="#38bdf8"/><circle cx="21" cy="16" r="6" fill="none" stroke="#38bdf8" stroke-width="2.2"/><path d="M21 22 L21 32 M16 28 L26 28" stroke="#38bdf8" stroke-width="2.2"/></svg><span class="term">GHRH</span><span class="plus">+</span></button>
+        <div class="g-a">
+          <div class="gsci"><span class="gslabel">Scientific definition</span><strong>Growth-hormone-releasing hormone</strong> — a hypothalamic hormone that signals the pituitary gland to release growth hormone in pulses. Tesamorelin is a stabilized synthetic analogue of GHRH: it binds the same receptor and <strong>drives the body's own GH production</strong> rather than supplying GH directly. This preserves the body's natural pulsatile pattern, which matters for how the signal affects fat metabolism.</div>
+          <div class="plain"><span class="plabel">Plain English</span>GHRH is the brain's "release growth hormone" signal to the pituitary gland. <strong>Tesamorelin is a synthetic copy of that signal</strong> — it gets your body to make more of its own growth hormone in its natural pulsing rhythm, instead of injecting growth hormone itself.</div>
+        </div>
+      </div>
+      <div class="g-item">
+        <button class="g-q" aria-expanded="false"><svg class="gthumb v3" viewBox="0 0 42 42"><rect x="3" y="3" width="36" height="36" rx="10" fill="#a3e63522" stroke="#a3e635"/><path d="M10 30 L21 14 L32 30 Z" fill="none" stroke="#a3e635" stroke-width="2.2"/><circle cx="21" cy="24" r="3" fill="#a3e635"/></svg><span class="term">IGF-1</span><span class="plus">+</span></button>
+        <div class="g-a">
+          <div class="gsci"><span class="gslabel">Scientific definition</span><strong>Insulin-like growth factor-1</strong> — a hormone produced mainly by the liver in response to growth hormone, mediating many of GH's effects on tissue, including fat metabolism. Tesamorelin treatment <strong>raises IGF-1 levels</strong>, and this rise was tracked in its trials as both a marker that the drug is engaging its pathway and a safety signal to watch. Persistently elevated IGF-1 is one reason tesamorelin carries specific contraindications.</div>
+          <div class="plain"><span class="plabel">Plain English</span>IGF-1 is the messenger the liver sends out when growth hormone shows up — it carries out a lot of GH's actual work on tissues, including fat. <strong>Tesamorelin raises IGF-1</strong>, which confirms the drug is doing its job — but it's also why doctors monitor it and why the drug has specific "do not use" situations.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 15 -->
+  <section class="chapter" id="ch15">
+    <div class="ch-head"><span class="ch-num mix">✦</span><h2>Quick quiz</h2></div>
+    <p class="ch-sub">One question — what stuck with you?</p>
+    <div class="card quiz rv" id="quizCard">
+      <button class="quiz-toggle" id="quizToggle" aria-expanded="false"><span>How useful was this comparison?</span><span class="quiz-chev">+</span></button>
+      <div class="quiz-body"><div class="quiz-inner">
+        <div class="quiz-options" id="quizOpts" role="group" aria-label="Rate this comparison">
+          <button data-v="3">🤯 Very useful <small>changed how I see it</small></button>
+          <button data-v="2">👍 Useful <small>cleared things up</small></button>
+          <button data-v="1">🙂 Okay <small>does the job</small></button>
+        </div>
+        <p class="quiz-thanks" id="quizThanks" hidden></p>
+        <div class="quiz-results" id="quizResults" hidden>
+          <p class="qr-head"><span id="qrTotal"></span> · <span>votes stay in this browser</span></p>
+          <div id="qrRows"></div>
+        </div>
+      </div></div>
+    </div>
+  </section>
+
+  <div class="totop-wrap rv">
+    <button class="totop" id="toTop" aria-label="Back to the top"><span class="tt-arrow">↑</span><span>Back to the top</span></button>
+  </div>
+
+</div><!-- /wrap -->
+<footer>
+  <div class="wrap">
+    <div class="disclaimer"><strong>📋 Please note:</strong> this page summarizes published human clinical research for educational reference only. It isn't medical advice, doesn't recommend any treatment, and isn't affiliated with any manufacturer. Tesamorelin is an FDA-approved prescription medicine for a specific use; retatrutide is investigational and not approved. No head-to-head trial comparing the two exists.</div>
+    <p><strong>Tesamorelin vs Retatrutide</strong> — an evidence check: retatrutide's research centers on broad weight loss; tesamorelin's on visceral-fat reduction. Different pathways, different studied goals — no universal winner.</p>
+  </div>
+</footer>
+</main>
+</div><!-- /shell -->
+<script>
+const $=id=>document.getElementById(id);
+const REDUCED=matchMedia('(prefers-reduced-motion: reduce)').matches;
+/* ambient dots */
+(function(){
+  const c=$('bg-dots'),x=c.getContext('2d');
+  const COLS=['#fb923c','#38bdf8','#f59e0b','#7dd3fc','#fdba74','#93c5fd'];
+  let W,H,D;
+  function size(){W=c.width=innerWidth;H=c.height=innerHeight;}
+  size(); addEventListener('resize',size);
+  D=Array.from({length:140},()=>({x:Math.random()*W,y:Math.random()*H,r:1.4+Math.random()*2.2,o:.30+Math.random()*.35,ph:Math.random()*6.28,sp:.004+Math.random()*.008,c:COLS[Math.random()*COLS.length|0]}));
+  (function tick(t){
+    x.clearRect(0,0,W,H);
+    for(const d of D){
+      const tw=.6+.4*Math.sin(t*d.sp+d.ph);
+      x.globalAlpha=d.o*tw; x.fillStyle=d.c;
+      x.beginPath(); x.arc(d.x,d.y,d.r,0,6.28); x.fill();
+    }
+    x.globalAlpha=1;
+    if(!REDUCED) requestAnimationFrame(tick);
+  })(0);
+})();
+/* reveal on scroll */
+(function(){
+  const els=document.querySelectorAll('.rv');
+  if(REDUCED||!('IntersectionObserver' in window)){els.forEach(e=>e.classList.add('in'));return;}
+  const o=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');o.unobserve(e.target);}}),{threshold:.08});
+  els.forEach(e=>o.observe(e));
+})();
+/* smooth scrolling */
+let scrollAnim=null;
+function smoothTo(t){
+  const doc=document.documentElement;
+  const sy=scrollY, ey=Math.max(0,t.getBoundingClientRect().top+sy-8), d=ey-sy;
+  cancelAnimationFrame(scrollAnim);
+  if(REDUCED||Math.abs(d)<4){ scrollTo(0,ey); return; }
+  const prev=doc.style.scrollBehavior; doc.style.scrollBehavior='auto';
+  const dur=Math.min(1100,420+Math.abs(d)*.32), t0=performance.now();
+  const ez=k=>k<.5?4*k*k*k:1-Math.pow(-2*k+2,3)/2;
+  const clean=()=>{ doc.style.scrollBehavior=prev; removeEventListener('wheel',ou); removeEventListener('touchmove',ou); };
+  const ou=()=>{ cancelAnimationFrame(scrollAnim); clean(); };
+  addEventListener('wheel',ou,{passive:true}); addEventListener('touchmove',ou,{passive:true});
+  function fr(now){
+    const p=Math.min(1,(now-t0)/dur);
+    scrollTo(0,sy+d*ez(p));
+    if(p<1) scrollAnim=requestAnimationFrame(fr); else clean();
+  }
+  scrollAnim=requestAnimationFrame(fr);
+}
+/* sidebar links + gliding indicator */
+(function(){
+  const links=[...document.querySelectorAll('#chapternav a')];
+  const ind=$('sideIndicator');
+  function moveIndicator(act){
+    if(!act){ ind.style.opacity=0; return; }
+    ind.style.opacity=1;
+    ind.style.top=(act.offsetTop+4)+'px';
+    ind.style.height=(act.offsetHeight-8)+'px';
+  }
+  function activate(id,link){
+    links.forEach(l=>l.classList.toggle('active',l===link));
+    moveIndicator(link);
+    document.querySelectorAll('#mrail a').forEach(l=>l.classList.toggle('active',l.getAttribute('href')==='#'+id));
+    if(history.replaceState) history.replaceState(null,'','#'+id);
+  }
+  links.forEach(a=>{
+    a.addEventListener('click',e=>{
+      e.preventDefault();
+      const t=document.querySelector(a.getAttribute('href'));
+      if(t) smoothTo(t);
+      activate(a.getAttribute('href').slice(1),a);
+      if(innerWidth<=900) close();
+    });
+  });
+  document.querySelectorAll('#mrail a').forEach(a=>{
+    a.addEventListener('click',e=>{
+      e.preventDefault();
+      const t=document.querySelector(a.getAttribute('href'));
+      if(t) smoothTo(t);
+    });
+  });
+  const secs=links.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+  const obs=new IntersectionObserver(es=>{
+    es.forEach(e=>{
+      if(e.isIntersecting){
+        const id=e.target.id;
+        const link=links.find(l=>l.getAttribute('href')==='#'+id);
+        if(link) activate(id,link);
+      }
+    });
+  },{rootMargin:'-40% 0px -55% 0px'});
+  secs.forEach(s=>obs.observe(s));
+  addEventListener('resize',()=>{const a=links.find(l=>l.classList.contains('active'));moveIndicator(a||null);});
+})();
+/* mobile drawer */
+function close(){document.body.classList.remove('side-open');}
+(function(){
+  $('menuBtn').onclick=()=>document.body.classList.add('side-open');
+  $('sideBackdrop').onclick=close;
+  addEventListener('keydown',e=>{if(e.key==='Escape')close();});
+})();
+/* reading progress */
+(function(){
+  const f=$('progressFill'), sf=$('sideFill'), sp=$('sidePct');
+  function upd(){
+    const h=document.documentElement;
+    const max=h.scrollHeight-h.clientHeight;
+    const p=max>0?Math.min(1,scrollY/max):0;
+    f.style.width=(p*100)+'%';
+    sf.style.width=(p*100)+'%';
+    sp.textContent=Math.round(p*100)+'%';
+  }
+  addEventListener('scroll',upd,{passive:true}); upd();
+})();
+/* theme */
+(function(){
+  const b=$('themeBtn');
+  const dark=()=>!document.documentElement.hasAttribute('data-theme');
+  function paint(){ b.textContent=dark()?'🌙':'☀️'; b.setAttribute('aria-label',dark()?'Switch to light mode':'Switch to dark mode'); }
+  b.onclick=()=>{
+    if(dark()) document.documentElement.setAttribute('data-theme','light');
+    else document.documentElement.removeAttribute('data-theme');
+    try{localStorage.setItem('tesavreta-theme',dark()?'dark':'light');}catch(e){}
+    paint(); b.classList.add('dim');
+  };
+  paint();
+})();
+/* glossary accordion */
+document.querySelectorAll('.g-item').forEach(it=>{
+  const q=it.querySelector('.g-q'), a=it.querySelector('.g-a');
+  q.addEventListener('click',()=>{
+    const open=it.classList.contains('open');
+    document.querySelectorAll('.g-item.open').forEach(o=>{
+      o.classList.remove('open'); o.querySelector('.g-a').style.maxHeight=null;
+      o.querySelector('.g-q').setAttribute('aria-expanded','false');
+    });
+    if(!open){
+      it.classList.add('open'); q.setAttribute('aria-expanded','true');
+      requestAnimationFrame(()=>{ a.style.maxHeight=a.scrollHeight+'px'; });
+    }
+  });
+});
+/* back to top */
+(function(){
+  const btn=$('toTop'); if(!btn) return;
+  btn.onclick=()=>{
+    const sy=scrollY;
+    cancelAnimationFrame(scrollAnim);
+    if(REDUCED||sy<4){ scrollTo(0,0); return; }
+    const dur=Math.min(1100,420+sy*.32), t0=performance.now();
+    const ez=k=>k<.5?4*k*k*k:1-Math.pow(-2*k+2,3)/2;
+    function fr(now){
+      const p=Math.min(1,(now-t0)/dur);
+      scrollTo(0,sy*(1-ez(p)));
+      if(p<1) scrollAnim=requestAnimationFrame(fr);
+    }
+    scrollAnim=requestAnimationFrame(fr);
+  };
+})();
+/* animated counters */
+(function(){
+  const els=document.querySelectorAll('.count');
+  if(!els.length) return;
+  function run(el){
+    const to=parseFloat(el.dataset.to), dec=parseInt(el.dataset.dec||'0',10);
+    const pre=el.dataset.prefix||'', suf=el.dataset.suffix||'';
+    if(REDUCED){ el.textContent=pre+to.toFixed(dec)+suf; return; }
+    const t0=performance.now(), dur=1400;
+    function fr(now){
+      const p=Math.min(1,(now-t0)/dur), e=1-Math.pow(1-p,3);
+      el.textContent=pre+(to*e).toFixed(dec)+suf;
+      if(p<1) requestAnimationFrame(fr);
+    }
+    requestAnimationFrame(fr);
+  }
+  if(!('IntersectionObserver' in window)){ els.forEach(run); return; }
+  const o=new IntersectionObserver(es=>es.forEach(e=>{
+    if(e.isIntersecting){ run(e.target); o.unobserve(e.target); }
+  }),{threshold:.4});
+  els.forEach(el=>o.observe(el));
+})();
+/* evidence table expandable rows */
+document.querySelectorAll('.ev-row').forEach(r=>{
+  r.addEventListener('click',()=>r.classList.toggle('open'));
+});
+/* body compartment toggle */
+(function(){
+  const comps={visc:$('compVisc'),subq:$('compSubq'),liver:$('compLiver'),gen:$('compGen')};
+  const note=$('bodyNote');
+  const btns={tesa:$('btTesa'),reta:$('btReta'),both:$('btBoth')};
+  function set(btn){ Object.values(btns).forEach(b=>b.className=''); btn.className='sel-'+btn.id.replace('bt','').toLowerCase(); }
+  function show(mode){
+    const on={tesa:['visc'],reta:['visc','subq','liver'],both:['visc','subq','liver','gen']}[mode];
+    Object.entries(comps).forEach(([k,el])=>el.classList.toggle('dim',!on.includes(k)));
+    note.textContent={tesa:'Tesamorelin research emphasizes visceral fat',reta:'Retatrutide research spans visceral + abdominal subcutaneous fat',both:'Different studies, different people — not a head-to-head'}[mode];
+  }
+  btns.tesa.onclick=()=>{set(btns.tesa);show('tesa');};
+  btns.reta.onclick=()=>{set(btns.reta);show('reta');};
+  btns.both.onclick=()=>{set(btns.both);show('both');};
+  set(btns.tesa); show('tesa');
+})();
+/* goal selector */
+(function(){
+  const out=$('goalOut');
+  const data={
+    weight:{t:'Retatrutide has the stronger research focus',c:'var(--reta)',d:'Mean <strong>−24.2% body-weight change</strong> at 48 weeks in the 12-mg Phase 2 group — the largest investigated effect on total weight. Tesamorelin\u2019s trials barely moved total weight (BMI −0.4%).'},
+    visceral:{t:'Tesamorelin has the most specific evidence',c:'var(--tesa)',d:'<strong>−15.2% visceral-fat reduction</strong> at 26 weeks in its pivotal trial — the endpoint it was designed around. Retatrutide also showed visceral reductions, but that wasn\u2019t its primary stage.'},
+    abdominal:{t:'Both have relevant data',c:'var(--text)',d:'<strong>Tesamorelin:</strong> visceral-focused, subcutaneous fat largely preserved. <strong>Retatrutide:</strong> reductions across visceral <em>and</em> abdominal subcutaneous fat.'},
+    appetite:{t:'Retatrutide, clearly',c:'var(--reta)',d:'Appetite and food-intake effects are <strong>central to retatrutide\u2019s investigated mechanism</strong> (GIP + GLP-1). Appetite isn\u2019t tesamorelin\u2019s pathway at all.'},
+    composition:{t:'Depends what you mean',c:'var(--text)',d:'<strong>Scale weight</strong> → retatrutide\u2019s data are stronger. <strong>Visceral compartment specifically</strong> → tesamorelin\u2019s data are more targeted.'}
+  };
+  function pick(k){
+    document.querySelectorAll('.goal-btns button').forEach(b=>b.classList.toggle('sel',b.dataset.goal===k));
+    const g=data[k];
+    out.innerHTML='<h3 style="color:'+g.c+'">'+g.t+'</h3><p>'+g.d+'</p>';
+  }
+  document.querySelectorAll('.goal-btns button').forEach(b=>b.onclick=()=>pick(b.dataset.goal));
+  pick('weight');
+})();
+/* rating quiz */
+(function(){
+  const KEY='tesavreta-quiz-votes', card=$('quizCard');
+  const labels={3:'Very useful',2:'Useful',1:'Okay'};
+  let votes={}; try{votes=JSON.parse(localStorage.getItem(KEY)||'{}');}catch(e){votes={};}
+  $('quizToggle').onclick=()=>{
+    const open=card.classList.toggle('open');
+    $('quizToggle').setAttribute('aria-expanded',open);
+  };
+  function render(){
+    const total=Object.values(votes).reduce((a,b)=>a+b,0);
+    $('qrTotal').textContent=total+(total===1?' vote':' votes');
+    $('qrRows').innerHTML=[3,2,1].map(v=>{
+      const n=votes[v]||0, pct=total?Math.round(n/total*100):0;
+      return '<div class="qr-row"><span class="qr-label">'+labels[v]+'</span><span class="qr-bar"><span style="width:'+pct+'%"></span></span><span class="qr-pct">'+n+' · '+pct+'%</span></div>';
+    }).join('');
+  }
+  $('quizOpts').querySelectorAll('button').forEach(b=>{
+    b.onclick=()=>{
+      const v=b.dataset.v;
+      votes[v]=(votes[v]||0)+1;
+      try{localStorage.setItem(KEY,JSON.stringify(votes));}catch(e){}
+      document.querySelectorAll('#quizOpts button').forEach(x=>x.classList.remove('picked'));
+      b.classList.add('picked');
+      const th=$('quizThanks');
+      th.innerHTML='Thanks — you rated this comparison <strong>'+labels[v].toLowerCase()+'</strong>.';
+      th.hidden=false;
+      $('quizResults').hidden=false;
+      render();
+    };
+  });
+  if(Object.keys(votes).length){ $('quizResults').hidden=false; render(); }
+})();
+</script>
+</body>
+</html>
